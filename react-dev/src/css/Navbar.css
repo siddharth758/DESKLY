@@ -1,0 +1,24 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  margin-left: 280px;
+  margin-top: 30px;
+  background: rgba(30, 41, 59, 0.6); /* slate with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* thin border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+  max-width: 810px;
+  padding: 5px;
+  color: #ffffff;
+}
+.navbar-options {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  font-weight: 400;
+}

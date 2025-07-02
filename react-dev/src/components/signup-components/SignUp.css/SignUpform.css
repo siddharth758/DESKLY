@@ -1,0 +1,50 @@
+.brand-btn {
+  color: #fff;
+  background-color: #1f2937;
+  border: none;
+  font-size: 25px;
+}
+.sign-form {
+  background: rgba(30, 41, 59, 0.6); /* slate with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* thin border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+}
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.sign-input {
+  margin-bottom: 10px;
+}
+.signin-input {
+  background: #fff;
+  padding: 5px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #4b5563;
+}
+.sign-btn {
+  margin-top: 20px;
+}
+.wrapper {
+  /* height: 130vh; */
+  position: relative;
+  top: 225px;
+  display: flex;
+  margin-left: 480px;
+  /* justify-content: center;
+  align-items: center; */
+}
