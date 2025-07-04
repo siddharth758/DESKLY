@@ -1,32 +1,29 @@
-// App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/landing";
 import SignupPage from "./pages/SignUpPage";
 import MainPage from "./pages/main-page";
-import Home from "./components/main-components/views/HOME.JSX";
-import Management from "./components/main-components/views/mangagement";
-import TaskList from "./components/main-components/views/task-list";
-import Calendar from "./components/main-components/views/calendar";
-import Files from "./components/main-components/views/files";
-
+import HomeView from "./views/homeView";
+import ManagementView from "./views/managementView";
+import TaskListView from "./views/taskListView";
+import CalendarView from "./views/calendarView";
+import FolderView from "./views/folderView";
 import "./css/App.css";
 
 function App() {
   return (
     <Router>
-      <div className="page-wrapper">
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/sign" element={<SignupPage />} />
-          {/* Main layout route with nested routes*/}
-          <Route path="/main" element={<MainPage />} />
-          <Route index element={<Home />} /> {/* /main */}
-          <Route path="management" element={<Management />} />
-          <Route path="tasklist" element={<TaskList />} />
-          <Route path="calendar" element={<Calendar />} />
-          <Route path="files" element={<Files />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/sign" element={<SignupPage />} />
+        <Route path="/main" element={<MainPage />}>
+          <Route index element={<HomeView />} />
+          <Route path="home" element={<HomeView />} />
+          <Route path="management" element={<ManagementView />} />
+          <Route path="taskList" element={<TaskListView />} />
+          <Route path="calender" element={<CalendarView />} />
+          <Route path="folder" element={<FolderView />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

@@ -1,21 +1,28 @@
-.navbar {
+.navbar-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 30px;
+  left: 140px; /* space taken by sidebar */
+  width: calc(100% - 280px);
   display: flex;
-  margin-left: 280px;
-  margin-top: 30px;
-  background: rgba(30, 41, 59, 0.6); /* slate with opacity */
+  justify-content: center; /* center navbar inside wrapper */
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  background: rgba(31, 31, 31, 0.4); /* semi-transparent */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1); /* thin border */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  padding: 5px 16px;
+  color: #e5e5e5;
+  width: 100%;
   max-width: 810px;
-  padding: 5px;
-  color: #ffffff;
+  transition: background 0.3s ease;
 }
+
 .navbar-options {
   display: flex;
   list-style: none;

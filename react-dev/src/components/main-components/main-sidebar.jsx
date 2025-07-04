@@ -1,91 +1,79 @@
-import "../main-components/main-com.css/main-sidebar.css";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../main-components/main-com.css/mainsidebar.css";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
-  faHouse,
-  faUsers,
-  faListCheck,
-  faCalendarDays,
-  faFileLines,
-  faGear,
-} from "@fortawesome/free-solid-svg-icons";
+  Home,
+  LayoutDashboard,
+  ListTodo,
+  CalendarDays,
+  Folder,
+} from "lucide-react";
 
 function MainSidebar() {
-  const [showNames, setShowNames] = useState(false);
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavigate = (path) => {
-    navigate(path);
-    setShowNames(false);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <>
-      <div
-        className="main-all"
-        onMouseEnter={() => setShowNames(true)}
-        // onMouseLeave={() => setShowNames(false)}
-      >
-        {/* Sidebar Icons */}
-        <div className="main-sidebar">
-          <div>
-            <div>
-              <FontAwesomeIcon icon={faHouse} />
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faUsers} />
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faListCheck} />
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faCalendarDays} />
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faFileLines} />
-            </div>
-          </div>
+    <div className="main-wrapper">
+      {/* Sidebar Icons */}
+      <div className="main-sidebar">
+        <ul onClick={toggleSidebar}>
+          <li>
+            <Link to="home">
+              <Home size={20} />
+            </Link>
+          </li>
 
-          <div>
-            <div className="main-setting-icon">
-              <FontAwesomeIcon icon={faGear} />
-            </div>
-          </div>
-        </div>
-
-        {/* Sidebar Text Labels (Clickable) */}
-        {showNames && (
-          <div className="main-sidebar-names">
-            <div>
-              <ul>
-                <li onClick={() => handleNavigate("/main")}>Home</li>
-                <li onClick={() => handleNavigate("/main/management")}>
-                  Management
-                </li>
-                <li onClick={() => handleNavigate("/main/tasklist")}>
-                  Task list
-                </li>
-                <li onClick={() => handleNavigate("/main/calendar")}>
-                  Calendar
-                </li>
-                <li onClick={() => handleNavigate("/main/files")}>Files</li>
-              </ul>
-            </div>
-            <div>
-              <div className="main-settings">
-                <ul>
-                  <li onClick={() => handleNavigate("/main/settings")}>
-                    Settings
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
+          <li>
+            <Link to="management">
+              {" "}
+              <LayoutDashboard size={20} />
+            </Link>
+          </li>
+          <li>
+            <Link to="taskList">
+              <ListTodo size={20} />
+            </Link>
+          </li>
+          <li>
+            <Link to="calender">
+              {" "}
+              <CalendarDays size={20} />
+            </Link>
+          </li>
+          <li>
+            <Link to="folder">
+              {" "}
+              <Folder size={20} />
+            </Link>
+          </li>
+        </ul>
       </div>
-    </>
+
+      {/* Sidebar Names with Links */}
+      <div className="main-sidebar-names">
+        <ul className={isOpen ? "" : "closed"}>
+          <li>
+            <Link to="home">Home</Link>
+          </li>
+          <li>
+            <Link to="management">Management</Link>
+          </li>
+          <li>
+            <Link to="taskList">Checklist</Link>
+          </li>
+          <li>
+            <Link to="calender">Calendar</Link>
+          </li>
+          <li>
+            <Link to="folder">Folder</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 

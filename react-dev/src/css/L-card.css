@@ -5,7 +5,7 @@
   padding: 2rem;
   text-align: center;
   font-family: sans-serif;
-  background: white;
+  background: #e5e5e5;
   border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -15,7 +15,7 @@
   padding: 15px; /* Space around the inner box */
   border-radius: 15px; /* Round outer corners */
   box-sizing: border-box;
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .grid {
   display: grid;
@@ -26,14 +26,15 @@
 .feature-box {
   width: auto;
   padding-top: 60px;
-  background-color: #e8e3e3;
-  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
   position: relative;
-  border: 1px solid #ffff;
+  border: 1px solid #5d5c5c;
   box-shadow: 2 2px 6px rgba(0, 0, 0, 0.05);
 }
 .start-button {
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  background: #7c3aed;
   /* background: linear-gradient(to right, #5a67d8, #9f7aea); */
   color: white;
   padding: 0.8rem 6rem;
@@ -42,18 +43,16 @@
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
 }
 
 .start-button:hover {
-  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
   transform: translateY(-2px);
   opacity: 0.9;
 }
 .move-me {
   position: relative;
-  left: 150px; /* Move entire card to the right */
+  left: 100px; /* Move entire card to the right */
   top: 50px; /* Move entire card down */
 }
 .card-stack {

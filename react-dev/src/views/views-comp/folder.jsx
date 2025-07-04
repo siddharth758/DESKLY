@@ -1,4 +1,4 @@
-function MainHeader() {
+function Folder() {
   return (
     <>
       <div></div>
@@ -6,4 +6,4 @@ function MainHeader() {
   );
 }
 
-export default MainHeader;
+export default Folder;
