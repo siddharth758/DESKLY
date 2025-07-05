@@ -1,90 +1,11 @@
 .main-wrapper {
-  display: flex;
 }
-
-/* Sidebar styling */
-.main-sidebar {
-  display: flex;
-  align-items: center;
-  background: #e5e5e5; /* or match the sidebar's color */
-  z-index: 2;
-  position: relative; /* Needed for z-index to work */
-}
-
-.main-sidebar ul {
-  margin: 0;
-  padding: 10px 10px 10px 0;
-  margin-left: 10px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  border-right: 1px solid black;
-}
-
-/* Top tilted line */
-.main-sidebar ul::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: 0px;
-  width: 60px;
-  height: 1px;
-  background: black;
-  transform: rotate(35deg);
-  transform-origin: right bottom;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Bottom tilted line */
-.main-sidebar ul::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: 0px;
-  width: 60px;
-  height: 1px;
-  background: black;
-  transform: rotate(-35deg);
-  transform-origin: right top;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.main-sidebar-names {
-  display: flex;
-  align-items: center;
-}
-.main-sidebar-names ul {
-  position: fixed;
-  z-index: 1;
-  margin: 0px;
-  padding: 0px;
-  padding: 14px 10px 14px 10px;
-  gap: 23px;
+.main-wrapper ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease;
-  left: 40px;
-  cursor: pointer;
-}
-.main-sidebar-names li:hover {
-  color: #7c3aed;
-}
-.main-sidebar-names ul.closed {
-  left: -50px;
-}
-.main-sidebar-names li {
-  font-size: 11px;
-  font-weight: 550;
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
