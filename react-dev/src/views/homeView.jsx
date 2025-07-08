@@ -1,11 +1,7 @@
-import Home from "./views-comp/home";
-
 function HomeView() {
   return (
     <>
-      <div>
-        <Home />
-      </div>
+      <div></div>
     </>
   );
 }

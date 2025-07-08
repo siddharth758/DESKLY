@@ -1,13 +1,8 @@
-import Management from "./views-comp/management";
-
 function ManagementView() {
   return (
     <>
-      <div>
-        <Management />
-      </div>
+      <div></div>
     </>
   );
 }
-
 export default ManagementView;

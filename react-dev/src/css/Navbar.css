@@ -1,10 +1,10 @@
 .navbar-wrapper {
   position: fixed;
   top: 30px;
-  left: 140px; /* space taken by sidebar */
+  left: 130px;
   width: calc(100% - 280px);
   display: flex;
-  justify-content: center; /* center navbar inside wrapper */
+  justify-content: center;
   z-index: 999;
 }
 

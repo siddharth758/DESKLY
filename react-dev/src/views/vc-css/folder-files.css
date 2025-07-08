@@ -1,0 +1,34 @@
+.folder-separataion ul {
+  padding-left: 150px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-weight: 600;
+}
+.folder-border-line {
+  height: 2px;
+  border-bottom: 2px solid black;
+  margin-left: 143px;
+}
+.file-list ul {
+  padding-left: 142px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 1400px;
+}
+.file-list ul li {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fixed-li ul {
+  padding-left: 155px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 500px;
+  font-weight: 550;
+}

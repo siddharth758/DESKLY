@@ -1,9 +1,20 @@
-import Folder from "./views-comp/folder";
+import FolderNavbar from "./views-comp/folderNavbar";
+import ActionList from "./views-comp/folderActionList";
+import FolderBox from "./views-comp/folderBox";
+import FolderFiles from "./views-comp/folderFiles";
+
 function FolderView() {
   return (
     <>
       <div>
-        <Folder />
+        <>
+          <div>
+            <FolderNavbar />
+            <ActionList />
+            <FolderBox />
+            <FolderFiles />
+          </div>
+        </>
       </div>
     </>
   );
