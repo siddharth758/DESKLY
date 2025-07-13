@@ -1,4 +1,5 @@
 import CheckListNavbar from "./views-comp/checklistNavbar";
+import "../views/vc-css/task-list-view.css";
 import { Outlet } from "react-router-dom";
 
 function TaskListView() {
@@ -6,7 +7,9 @@ function TaskListView() {
     <>
       <div>
         <CheckListNavbar />
-        <Outlet />
+        <div className="board-outlet">
+          <Outlet />
+        </div>
       </div>
     </>
   );

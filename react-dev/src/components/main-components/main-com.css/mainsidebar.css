@@ -51,6 +51,7 @@
   transition: left 0.3s ease;
   left: 40px;
   cursor: pointer;
+  background-color: #e5e5e5;
 }
 .main-sidebar-names li:hover {
   color: #7c3aed;

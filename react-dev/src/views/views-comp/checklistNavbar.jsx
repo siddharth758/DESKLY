@@ -25,7 +25,9 @@ function CheckListNavbar() {
           <div className="task-list">
             <ul onClick={toggleNavbar}>
               <li>
-                <PanelLeft size={24} />
+                <Link to="boards">
+                  <PanelLeft size={24} />
+                </Link>
               </li>
               <li>
                 <ListTodo size={24} />

@@ -7,7 +7,7 @@ import ManagementView from "./views/managementView";
 import TaskListView from "./views/taskListView";
 import CalendarView from "./views/calendarView";
 import FolderView from "./views/folderView";
-import ChecklistBoards from "./checklist-view/checklistBoard";
+import CheckListSection from "./checklist-view/CheckListSection/CheckListSection";
 import "./css/App.css";
 
 function App() {
@@ -21,7 +21,8 @@ function App() {
           <Route path="home" element={<HomeView />} />
           <Route path="management" element={<ManagementView />} />
           <Route path="taskList" element={<TaskListView />}>
-            <Route path="boards" element={<ChecklistBoards />} />
+            <Route index element={<CheckListSection />} />
+            <Route path="boards" element={<CheckListSection />} />
           </Route>
           <Route path="calender" element={<CalendarView />} />
           <Route path="folder" element={<FolderView />} />
